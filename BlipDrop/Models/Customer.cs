@@ -11,7 +11,6 @@ namespace BlipDrop.Models
     {
         [Key]
         [Column(Order = 1)]
-        [MaxLength(128)]
         public Guid CustomerID { get; set; }
 
         [MaxLength(3)]
