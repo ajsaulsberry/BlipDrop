@@ -14,11 +14,12 @@ namespace BlipDrop.ViewModels
         [MaxLength(75)]
         public string CustomerName { get; set; }
 
+        [Display(Name = "Country")]
         public string SelectedCountryIso3 { get; set; }
         public IEnumerable<SelectListItem> Countries { get; set; }
 
         [Display(Name = "State / Region")]
-        public string SelectedRegion { get; set; }
+        public string SelectedRegionCode { get; set; }
         public IEnumerable<SelectListItem> Regions { get; set; }
 
     }

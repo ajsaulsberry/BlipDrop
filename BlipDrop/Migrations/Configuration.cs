@@ -7,14 +7,14 @@ namespace BlipDrop.Migrations
     using System.Linq;
     using BlipDrop.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Data.BlipDropContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Data.BlipDropContext context)
+        protected override void Seed(Data.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -46,287 +46,287 @@ namespace BlipDrop.Migrations
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "AL",
-                    RegionName = "Alabama"
+                    RegionCode = "AL",
+                    RegionNameEnglish = "Alabama"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "AK",
-                    RegionName = "Alaska"
+                    RegionCode = "AK",
+                    RegionNameEnglish = "Alaska"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "AZ",
-                    RegionName = "Arizona"
+                    RegionCode = "AZ",
+                    RegionNameEnglish = "Arizona"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "AR",
-                    RegionName = "Arkansas"
+                    RegionCode = "AR",
+                    RegionNameEnglish = "Arkansas"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "CA",
-                    RegionName = "California"
+                    RegionCode = "CA",
+                    RegionNameEnglish = "California"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "CO",
-                    RegionName = "Colorado"
+                    RegionCode = "CO",
+                    RegionNameEnglish = "Colorado"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "CT",
-                    RegionName = "Connecticut"
+                    RegionCode = "CT",
+                    RegionNameEnglish = "Connecticut"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "DE",
-                    RegionName = "Delaware"
+                    RegionCode = "DE",
+                    RegionNameEnglish = "Delaware"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "NY",
-                    RegionName = "ork"
+                    RegionCode = "NY",
+                    RegionNameEnglish = "ork"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "NC",
-                    RegionName = "North Carolina"
+                    RegionCode = "NC",
+                    RegionNameEnglish = "North Carolina"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "ND",
-                    RegionName = "North Dakota"
+                    RegionCode = "ND",
+                    RegionNameEnglish = "North Dakota"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "OH",
-                    RegionName = "Ohio"
+                    RegionCode = "OH",
+                    RegionNameEnglish = "Ohio"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "OK",
-                    RegionName = "Oklahoma"
+                    RegionCode = "OK",
+                    RegionNameEnglish = "Oklahoma"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "OR",
-                    RegionName = "Oregon"
+                    RegionCode = "OR",
+                    RegionNameEnglish = "Oregon"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "PA",
-                    RegionName = "Pennsylvania"
+                    RegionCode = "PA",
+                    RegionNameEnglish = "Pennsylvania"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "RI",
-                    RegionName = "Rhode Island"
+                    RegionCode = "RI",
+                    RegionNameEnglish = "Rhode Island"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "SC",
-                    RegionName = "South Carolina"
+                    RegionCode = "SC",
+                    RegionNameEnglish = "South Carolina"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "SD",
-                    RegionName = "South Dakota"
+                    RegionCode = "SD",
+                    RegionNameEnglish = "South Dakota"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "TN",
-                    RegionName = "Tennessee"
+                    RegionCode = "TN",
+                    RegionNameEnglish = "Tennessee"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "TX",
-                    RegionName = "Texas"
+                    RegionCode = "TX",
+                    RegionNameEnglish = "Texas"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "UT",
-                    RegionName = "Utah"
+                    RegionCode = "UT",
+                    RegionNameEnglish = "Utah"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "VT",
-                    RegionName = "Vermont"
+                    RegionCode = "VT",
+                    RegionNameEnglish = "Vermont"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "VA",
-                    RegionName = "Virginia"
+                    RegionCode = "VA",
+                    RegionNameEnglish = "Virginia"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "WA",
-                    RegionName = "Washington"
+                    RegionCode = "WA",
+                    RegionNameEnglish = "Washington"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "WV",
-                    RegionName = "West Virginia"
+                    RegionCode = "WV",
+                    RegionNameEnglish = "West Virginia"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "WI",
-                    RegionName = "Wisconsin"
+                    RegionCode = "WI",
+                    RegionNameEnglish = "Wisconsin"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "WY",
-                    RegionName = "Wyoming"
+                    RegionCode = "WY",
+                    RegionNameEnglish = "Wyoming"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "AS",
-                    RegionName = "American Samoa"
+                    RegionCode = "AS",
+                    RegionNameEnglish = "American Samoa"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "FM",
-                    RegionName = "Federated States of Micronesia"
+                    RegionCode = "FM",
+                    RegionNameEnglish = "Federated States of Micronesia"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "GU",
-                    RegionName = "Guam"
+                    RegionCode = "GU",
+                    RegionNameEnglish = "Guam"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "MH",
-                    RegionName = "Marshall Islands"
+                    RegionCode = "MH",
+                    RegionNameEnglish = "Marshall Islands"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "MP",
-                    RegionName = "Northern Mariana Islands"
+                    RegionCode = "MP",
+                    RegionNameEnglish = "Northern Mariana Islands"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "PR",
-                    RegionName = "Puerto Rico"
+                    RegionCode = "PR",
+                    RegionNameEnglish = "Puerto Rico"
                 },
                 new Region
                 {
                     Iso3 = "USA",
-                    PostalCode = "VI",
-                    RegionName = "US Virgin Islands"
+                    RegionCode = "VI",
+                    RegionNameEnglish = "US Virgin Islands"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "AB",
-                    RegionName = "Alberta"
+                    RegionCode = "AB",
+                    RegionNameEnglish = "Alberta"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "BC",
-                    RegionName = "British Columbia"
+                    RegionCode = "BC",
+                    RegionNameEnglish = "British Columbia"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "MB",
-                    RegionName = "Manitoba"
+                    RegionCode = "MB",
+                    RegionNameEnglish = "Manitoba"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "NB",
-                    RegionName = "New Brunswick"
+                    RegionCode = "NB",
+                    RegionNameEnglish = "New Brunswick"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "NF",
-                    RegionName = "Newfoundland"
+                    RegionCode = "NF",
+                    RegionNameEnglish = "Newfoundland"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "NT",
-                    RegionName = "Northwest Territories"
+                    RegionCode = "NT",
+                    RegionNameEnglish = "Northwest Territories"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "NS",
-                    RegionName = "Nova Scotia"
+                    RegionCode = "NS",
+                    RegionNameEnglish = "Nova Scotia"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "NU",
-                    RegionName = "Nunavut"
+                    RegionCode = "NU",
+                    RegionNameEnglish = "Nunavut"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "ON",
-                    RegionName = "Ontario"
+                    RegionCode = "ON",
+                    RegionNameEnglish = "Ontario"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "PE",
-                    RegionName = "Prince Edward Island"
+                    RegionCode = "PE",
+                    RegionNameEnglish = "Prince Edward Island"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "QC",
-                    RegionName = "Québec"
+                    RegionCode = "QC",
+                    RegionNameEnglish = "Québec"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "SK",
-                    RegionName = "Saskatchewan"
+                    RegionCode = "SK",
+                    RegionNameEnglish = "Saskatchewan"
                 },
                 new Region
                 {
                     Iso3 = "CAN",
-                    PostalCode = "YT",
-                    RegionName = "Yukon"
+                    RegionCode = "YT",
+                    RegionNameEnglish = "Yukon"
                 }
             };
-            regions.ForEach(s => context.Regions.AddOrUpdate(p => p.PostalCode, s));
+            regions.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
             context.SaveChanges();
         }
     }

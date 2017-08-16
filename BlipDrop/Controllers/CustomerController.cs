@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BlipDrop.Data;
+using BlipDrop.ViewModels;
 
 namespace BlipDrop.Controllers
 {
@@ -11,7 +13,9 @@ namespace BlipDrop.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            return View();
+            var repo = new CustomersRepository();
+            var customerList = repo.GetCustomers();
+            return View(customerList);
         }
 
         // GET: Customer/Details/5
@@ -23,18 +27,27 @@ namespace BlipDrop.Controllers
         // GET: Customer/Create
         public ActionResult Create()
         {
-            return View();
+            var repo = new CustomersRepository();
+            var customer = repo.CreateCustomer();
+            return View(customer);
         }
 
         // POST: Customer/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create([Bind(Include = "CustomerID, CustomerName, SelectedCountryIso3, SelectedRegionCode")] CustomerEditViewModel model)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var repo = new CustomersRepository();
+                    bool saved = repo.SaveCustomer(model);
+                    if (saved)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
+                return View();
             }
             catch
             {
