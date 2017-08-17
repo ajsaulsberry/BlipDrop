@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Linq;
 using BlipDrop.Models;
 using BlipDrop.ViewModels;
-using BlipDrop.Data;
 
 namespace BlipDrop.Data
 {
@@ -70,10 +69,7 @@ namespace BlipDrop.Data
                             CustomerID = newGuid,
                             CustomerName = customeredit.CustomerName,
                             CountryIso3 = customeredit.SelectedCountryIso3,
-                            //Country = context.Countries.Find(customeredit.SelectedCountryIso3),
-                            RegionCode = customeredit.SelectedRegionCode,
-                            //Region = context.Regions.Find(customeredit.SelectedRegionCode),
-                            
+                            RegionCode = customeredit.SelectedRegionCode
                         };
                         customer.Country = context.Countries.Find(customeredit.SelectedCountryIso3);
                         customer.Region = context.Regions.Find(customeredit.SelectedCountryIso3, customeredit.SelectedRegionCode);
