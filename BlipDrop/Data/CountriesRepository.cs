@@ -12,7 +12,7 @@ namespace BlipDrop.Data
         {
             using (var context = new ApplicationDbContext())
             {
-                IEnumerable<SelectListItem> countries = context.Countries.AsNoTracking()
+                List<SelectListItem> countries = context.Countries.AsNoTracking()
                     .OrderBy(n => n.CountryNameEnglish)
                         .Select(n =>
                         new SelectListItem
@@ -20,6 +20,12 @@ namespace BlipDrop.Data
                             Value = n.Iso3.ToString(),
                             Text = n.CountryNameEnglish
                         }).ToList();
+                var countrytip = new SelectListItem()
+                {
+                    Value = null,
+                    Text = "--- select country ---"
+                };
+                countries.Insert(0, countrytip);
                 return new SelectList(countries, "Value", "Text");
             }
         }

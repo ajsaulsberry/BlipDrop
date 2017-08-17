@@ -11,7 +11,7 @@ namespace BlipDrop.ViewModels
         public string CustomerID { get; set; }
 
         [Display(Name = "Customer Name")]
-        [MaxLength(75)]
+        [StringLength(75)]
         public string CustomerName { get; set; }
 
         [Display(Name = "Country")]

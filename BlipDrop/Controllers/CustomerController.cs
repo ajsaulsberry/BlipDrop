@@ -18,6 +18,15 @@ namespace BlipDrop.Controllers
             return View(customerList);
         }
 
+        public ActionResult GetRegions(string iso3)
+        {
+            var repo = new RegionsRepository();
+
+            IEnumerable<SelectListItem> regions = repo.GetRegions(iso3);
+            return Json(regions, JsonRequestBehavior.AllowGet);
+        }
+
+
         // GET: Customer/Details/5
         public ActionResult Details(int id)
         {

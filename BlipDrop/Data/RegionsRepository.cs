@@ -8,21 +8,38 @@ namespace BlipDrop.Data
 {
     public class RegionsRepository
     {
+        public IEnumerable<SelectListItem> GetRegions()
+        {
+            List<SelectListItem> regions = new List<SelectListItem>()
+            {
+                new SelectListItem
+                {
+                    Value = null,
+                    Text = " "
+                }
+            };
+            return regions;
+        }
+
         public IEnumerable<SelectListItem> GetRegions(string iso3)
         {
-            using (var context = new ApplicationDbContext())
+            if (!String.IsNullOrWhiteSpace(iso3))
             {
-                IEnumerable<SelectListItem> regions = context.Regions.AsNoTracking()
-                    .OrderBy(n => n.RegionNameEnglish)
-                    .Where(n => n.Iso3 == iso3)
-                    .Select(n =>
-                       new SelectListItem
-                       {
-                           Value = n.RegionCode,
-                           Text = n.RegionNameEnglish
-                       }).ToList();
-                return new SelectList(regions, "Value", "Text");
+                using (var context = new ApplicationDbContext())
+                {
+                    IEnumerable<SelectListItem> regions = context.Regions.AsNoTracking()
+                        .OrderBy(n => n.RegionNameEnglish)
+                        .Where(n => n.Iso3 == iso3)
+                        .Select(n =>
+                           new SelectListItem
+                           {
+                               Value = n.RegionCode,
+                               Text = n.RegionNameEnglish
+                           }).ToList();
+                    return new SelectList(regions, "Value", "Text");
+                }
             }
+            return null;
         }
     }
 }

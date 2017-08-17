@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using BlipDrop.Models;
 using BlipDrop.ViewModels;
+using BlipDrop.Data;
 
 namespace BlipDrop.Data
 {
@@ -31,6 +32,7 @@ namespace BlipDrop.Data
                             CountryName = x.Country.CountryNameEnglish,
                             RegionName = x.Region.RegionNameEnglish
                         };
+                        customersDisplay.Add(customerDisplay);
                     }
                     return customersDisplay;
                 }
@@ -39,13 +41,17 @@ namespace BlipDrop.Data
         }
 
 
-        public Customer CreateCustomer()
+        public CustomerEditViewModel CreateCustomer()
         {
             using (var context = new ApplicationDbContext())
             {
-                var customer = new Customer()
+                var cRepo = new CountriesRepository();
+                var rRepo = new RegionsRepository();
+                var customer = new CustomerEditViewModel()
                 {
-                    CustomerID = Guid.NewGuid()
+                    CustomerID = Guid.NewGuid().ToString(),
+                    Countries = cRepo.GetCountries(),
+                    Regions = rRepo.GetRegions()
                 };
                 return customer;
             }
@@ -64,8 +70,13 @@ namespace BlipDrop.Data
                             CustomerID = newGuid,
                             CustomerName = customeredit.CustomerName,
                             CountryIso3 = customeredit.SelectedCountryIso3,
-                            RegionCode = customeredit.SelectedRegionCode
+                            //Country = context.Countries.Find(customeredit.SelectedCountryIso3),
+                            RegionCode = customeredit.SelectedRegionCode,
+                            //Region = context.Regions.Find(customeredit.SelectedRegionCode),
+                            
                         };
+                        customer.Country = context.Countries.Find(customeredit.SelectedCountryIso3);
+                        customer.Region = context.Regions.Find(customeredit.SelectedCountryIso3, customeredit.SelectedRegionCode);
 
                         context.Customers.Add(customer);
                         context.SaveChanges();

@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Customer";
 }
-
 <h2>Customer</h2>
 
 
@@ -29,7 +28,7 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(x => Model.SelectedCountryIso3, htmlAttributes: new { @class = "control-label col-md-3 col-md-offset-1" })
+            @Html.LabelFor(x => Model.SelectedCountryIso3, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-5">
                 @Html.DropDownListFor(x => Model.SelectedCountryIso3, new SelectList(Model.Countries, "Value", "Text"), htmlAttributes: new { @class = "form-control", id = "Country"})
                 @Html.ValidationMessageFor(x => x.SelectedCountryIso3, "", new { @class = "text-danger" })
@@ -37,9 +36,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(x => Model.SelectedRegionCode, htmlAttributes: new { @class = "control-label col-md-3 col-md-offset-1" })
+            @Html.LabelFor(x => Model.SelectedRegionCode, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-5">
-                @Html.DropDownListFor(x => Model.SelectedRegionCode, new SelectList(Model.SelectedRegionCode, "Value", "Text"), htmlAttributes: new { @class = "form-control", @id = "Region" })
+                @Html.DropDownListFor(x => Model.SelectedRegionCode, new SelectList(Model.Regions, "Value", "Text"), htmlAttributes: new { @class = "form-control", @id = "Region" })
                 @Html.ValidationMessageFor(x => x.SelectedRegionCode, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -59,15 +58,15 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     <script type="text/javascript">
-            $(document).ready(function () {
+            $('#Country').change(function () {
                 var selectedCountry = $("#Country").val();
+                var regionsSelect = $('#Region');
+                regionsSelect.empty();
                 if (selectedCountry != null && selectedCountry != '') {
                     $.getJSON('@Url.Action("GetRegions")', { iso3: selectedCountry }, function (regions) {
-                        var regionsSelect = $('#Region');
-                        regionsSelect.empty();
                         regionsSelect.append($('<option/>', {
                             value: null,
-                            text: "-- select state/region --"
+                            text: "--- select state/region ---"
                         }));
                         $.each(regions, function (index, region) {
                             regionsSelect.append($('<option/>', {
