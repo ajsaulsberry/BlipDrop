@@ -166,6 +166,10 @@
     <Compile Include="Migrations\201708171240354_FixRegionCode.Designer.cs">
       <DependentUpon>201708171240354_FixRegionCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708171317091_RemoveCompoundKey.cs" />
+    <Compile Include="Migrations\201708171317091_RemoveCompoundKey.Designer.cs">
+      <DependentUpon>201708171317091_RemoveCompoundKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -248,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708171240354_FixRegionCode.resx">
       <DependentUpon>201708171240354_FixRegionCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708171317091_RemoveCompoundKey.resx">
+      <DependentUpon>201708171317091_RemoveCompoundKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

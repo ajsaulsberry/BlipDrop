@@ -10,14 +10,11 @@ namespace BlipDrop.Models
     public class Region
     {
         [Key]
-        [Column(Order = 1)]
-        [MaxLength(3)]
-        public string Iso3 { get; set; }
-
-        [Key]
-        [Column(Order = 2)]
         [MaxLength(3)]
         public string RegionCode { get; set; }
+
+        [MaxLength(3)]
+        public string Iso3 { get; set; }
 
         public string RegionNameEnglish { get; set; }
 
