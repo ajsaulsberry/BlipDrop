@@ -11,7 +11,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>CustomerEditViewModel</h4>
+        <h4>Create a new customer by entering the customer name, country, and region.</h4>
         <hr />
         <div class="form-group">
             @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -64,16 +64,19 @@
                 regionsSelect.empty();
                 if (selectedCountry != null && selectedCountry != '') {
                     $.getJSON('@Url.Action("GetRegions")', { iso3: selectedCountry }, function (regions) {
-                        regionsSelect.append($('<option/>', {
-                            value: null,
-                            text: "--- select state/region ---"
-                        }));
-                        $.each(regions, function (index, region) {
+                        if (regions != null && !jQuery.isEmptyObject(regions))
+                        {
                             regionsSelect.append($('<option/>', {
-                                value: region.Value,
-                                text: region.Text
+                                value: null,
+                                text: ""
                             }));
-                        });
+                            $.each(regions, function (index, region) {
+                                regionsSelect.append($('<option/>', {
+                                    value: region.Value,
+                                    text: region.Text
+                                }));
+                            });
+                        };
                     });
                 }
             });

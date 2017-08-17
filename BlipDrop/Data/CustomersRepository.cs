@@ -72,7 +72,7 @@ namespace BlipDrop.Data
                             RegionCode = customeredit.SelectedRegionCode
                         };
                         customer.Country = context.Countries.Find(customeredit.SelectedCountryIso3);
-                        customer.Region = context.Regions.Find(customeredit.SelectedCountryIso3, customeredit.SelectedRegionCode);
+                        customer.Region = context.Regions.Find(customeredit.SelectedRegionCode);
 
                         context.Customers.Add(customer);
                         context.SaveChanges();
