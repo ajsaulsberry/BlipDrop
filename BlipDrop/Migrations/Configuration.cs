@@ -41,14 +41,20 @@ namespace BlipDrop.Migrations
             countries.ForEach(s => context.Countries.AddOrUpdate(p => p.Iso3, s));
             context.SaveChanges();
 
-            var regions = new List<Region>
+            var regions0 = new List<Region>
             {
                 new Region
                 {
                     Iso3 = "USA",
                     RegionCode = "AL",
                     RegionNameEnglish = "Alabama"
-                },
+                }
+            };
+            regions0.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
+            context.SaveChanges();
+
+            var regions1 = new List<Region>
+            {
                 new Region
                 {
                     Iso3 = "USA",
@@ -88,22 +94,184 @@ namespace BlipDrop.Migrations
                 new Region
                 {
                     Iso3 = "USA",
+                    RegionCode = "DC",
+                    RegionNameEnglish = "District of Columbia"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
                     RegionCode = "DE",
                     RegionNameEnglish = "Delaware"
                 },
                 new Region
                 {
                     Iso3 = "USA",
+                    RegionCode = "FL",
+                    RegionNameEnglish = "Florida"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "GA",
+                    RegionNameEnglish = "Georgia"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "HI",
+                    RegionNameEnglish = "Hawaii"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "IA",
+                    RegionNameEnglish = "Iowa"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "ID",
+                    RegionNameEnglish = "Idaho"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "IL",
+                    RegionNameEnglish = "Illinois"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "IN",
+                    RegionNameEnglish = "Indiana"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "KS",
+                    RegionNameEnglish = "Kansas"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "KY",
+                    RegionNameEnglish = "Kentucky"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "LA",
+                    RegionNameEnglish = "Louisiana"
+                }
+            };
+            regions1.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
+            context.SaveChanges();
+
+            var regions2 = new List<Region>
+            {
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MD",
+                    RegionNameEnglish = "Maryland"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "ME",
+                    RegionNameEnglish = "Maine"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MA",
+                    RegionNameEnglish = "Massachsetts"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MI",
+                    RegionNameEnglish = "Michigan"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MN",
+                    RegionNameEnglish = "Minnesota"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MS",
+                    RegionNameEnglish = "Mississippi"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MO",
+                    RegionNameEnglish = "Missouri"
+                }
+            };
+            regions2.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
+            context.SaveChanges();
+
+            var regions3 = new List<Region>
+            { 
+            new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "MT",
+                    RegionNameEnglish = "Montana"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "NE",
+                    RegionNameEnglish = "Nebraska"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "NV",
+                    RegionNameEnglish = "Nevada"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "NH",
+                    RegionNameEnglish = "New Hampshire"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "NJ",
+                    RegionNameEnglish = "New Jersey"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
+                    RegionCode = "NM",
+                    RegionNameEnglish = "New Mexico"
+                },
+                new Region
+                {
+                    Iso3 = "USA",
                     RegionCode = "NY",
-                    RegionNameEnglish = "ork"
+                    RegionNameEnglish = "New York"
                 },
                 new Region
                 {
                     Iso3 = "USA",
                     RegionCode = "NC",
                     RegionNameEnglish = "North Carolina"
-                },
-                new Region
+                }
+            };
+            regions3.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
+            context.SaveChanges();
+
+            var regions4 = new List<Region>
+            {
+            new Region
                 {
                     Iso3 = "USA",
                     RegionCode = "ND",
@@ -326,7 +494,7 @@ namespace BlipDrop.Migrations
                     RegionNameEnglish = "Yukon"
                 }
             };
-            regions.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
+            regions4.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
             context.SaveChanges();
         }
     }

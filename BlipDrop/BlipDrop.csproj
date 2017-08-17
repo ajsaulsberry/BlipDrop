@@ -158,17 +158,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708161948496_InitialMigration.cs" />
-    <Compile Include="Migrations\201708161948496_InitialMigration.Designer.cs">
-      <DependentUpon>201708161948496_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708171240354_FixRegionCode.cs" />
-    <Compile Include="Migrations\201708171240354_FixRegionCode.Designer.cs">
-      <DependentUpon>201708171240354_FixRegionCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708171317091_RemoveCompoundKey.cs" />
-    <Compile Include="Migrations\201708171317091_RemoveCompoundKey.Designer.cs">
-      <DependentUpon>201708171317091_RemoveCompoundKey.cs</DependentUpon>
+    <Compile Include="Migrations\201708171525596_InitialMigration.cs" />
+    <Compile Include="Migrations\201708171525596_InitialMigration.Designer.cs">
+      <DependentUpon>201708171525596_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
@@ -247,14 +239,8 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708161948496_InitialMigration.resx">
-      <DependentUpon>201708161948496_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708171240354_FixRegionCode.resx">
-      <DependentUpon>201708171240354_FixRegionCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708171317091_RemoveCompoundKey.resx">
-      <DependentUpon>201708171317091_RemoveCompoundKey.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708171525596_InitialMigration.resx">
+      <DependentUpon>201708171525596_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
