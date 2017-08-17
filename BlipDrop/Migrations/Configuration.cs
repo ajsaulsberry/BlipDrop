@@ -41,20 +41,14 @@ namespace BlipDrop.Migrations
             countries.ForEach(s => context.Countries.AddOrUpdate(p => p.Iso3, s));
             context.SaveChanges();
 
-            var regions0 = new List<Region>
+            var regions = new List<Region>
             {
                 new Region
                 {
                     Iso3 = "USA",
                     RegionCode = "AL",
                     RegionNameEnglish = "Alabama"
-                }
-            };
-            regions0.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
-            context.SaveChanges();
-
-            var regions1 = new List<Region>
-            {
+                },
                 new Region
                 {
                     Iso3 = "USA",
@@ -162,13 +156,7 @@ namespace BlipDrop.Migrations
                     Iso3 = "USA",
                     RegionCode = "LA",
                     RegionNameEnglish = "Louisiana"
-                }
-            };
-            regions1.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
-            context.SaveChanges();
-
-            var regions2 = new List<Region>
-            {
+                },
                 new Region
                 {
                     Iso3 = "USA",
@@ -210,14 +198,8 @@ namespace BlipDrop.Migrations
                     Iso3 = "USA",
                     RegionCode = "MO",
                     RegionNameEnglish = "Missouri"
-                }
-            };
-            regions2.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
-            context.SaveChanges();
-
-            var regions3 = new List<Region>
-            { 
-            new Region
+                },
+                new Region
                 {
                     Iso3 = "USA",
                     RegionCode = "MT",
@@ -264,14 +246,8 @@ namespace BlipDrop.Migrations
                     Iso3 = "USA",
                     RegionCode = "NC",
                     RegionNameEnglish = "North Carolina"
-                }
-            };
-            regions3.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
-            context.SaveChanges();
-
-            var regions4 = new List<Region>
-            {
-            new Region
+                },
+                new Region
                 {
                     Iso3 = "USA",
                     RegionCode = "ND",
@@ -494,7 +470,7 @@ namespace BlipDrop.Migrations
                     RegionNameEnglish = "Yukon"
                 }
             };
-            regions4.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
+            regions.ForEach(s => context.Regions.AddOrUpdate(p => p.RegionCode, s));
             context.SaveChanges();
         }
     }

@@ -13,7 +13,7 @@ namespace BlipDrop.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201708171525596_InitialMigration"; }
+            get { return "201708171531276_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source
