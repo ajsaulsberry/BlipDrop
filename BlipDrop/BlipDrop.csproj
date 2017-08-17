@@ -162,6 +162,10 @@
     <Compile Include="Migrations\201708161948496_InitialMigration.Designer.cs">
       <DependentUpon>201708161948496_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708171240354_FixRegionCode.cs" />
+    <Compile Include="Migrations\201708171240354_FixRegionCode.Designer.cs">
+      <DependentUpon>201708171240354_FixRegionCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -241,6 +245,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708161948496_InitialMigration.resx">
       <DependentUpon>201708161948496_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708171240354_FixRegionCode.resx">
+      <DependentUpon>201708171240354_FixRegionCode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

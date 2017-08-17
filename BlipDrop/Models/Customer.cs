@@ -17,8 +17,9 @@ namespace BlipDrop.Models
         public string CustomerName { get; set; }
 
         [MaxLength(3)]
-        public string CountryIso3 { get; set; }    
+        public string CountryIso3 { get; set; }
 
+        [MaxLength(3)]
         public string RegionCode { get; set; }
 
         public virtual Country Country { get; set; }

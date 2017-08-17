@@ -16,6 +16,7 @@ namespace BlipDrop.Models
 
         [Key]
         [Column(Order = 2)]
+        [MaxLength(3)]
         public string RegionCode { get; set; }
 
         public string RegionNameEnglish { get; set; }
