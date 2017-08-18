@@ -162,6 +162,14 @@
     <Compile Include="Migrations\201708171531276_InitialMigration.Designer.cs">
       <DependentUpon>201708171531276_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708181842155_RequiredCustomerFields.cs" />
+    <Compile Include="Migrations\201708181842155_RequiredCustomerFields.Designer.cs">
+      <DependentUpon>201708181842155_RequiredCustomerFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708182100167_ModelFinetuning.cs" />
+    <Compile Include="Migrations\201708182100167_ModelFinetuning.Designer.cs">
+      <DependentUpon>201708182100167_ModelFinetuning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -171,10 +179,6 @@
     <Compile Include="ViewModels\CustomerEditViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\BlipDrop.mdf" />
-    <Content Include="App_Data\BlipDrop_log.ldf">
-      <DependentUpon>BlipDrop.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -230,7 +234,9 @@
     <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -243,6 +249,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708171531276_InitialMigration.resx">
       <DependentUpon>201708171531276_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708181842155_RequiredCustomerFields.resx">
+      <DependentUpon>201708181842155_RequiredCustomerFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708182100167_ModelFinetuning.resx">
+      <DependentUpon>201708182100167_ModelFinetuning.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
