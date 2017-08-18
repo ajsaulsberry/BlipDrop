@@ -14,7 +14,7 @@ namespace BlipDrop.ViewModels
         [Display(Name = "Country")]
         public string CountryName { get; set; }
 
-        [Display(Name = "State/Provence/Region")]
+        [Display(Name = "State / Province / Region")]
         public string RegionName { get; set; }
     }
 }

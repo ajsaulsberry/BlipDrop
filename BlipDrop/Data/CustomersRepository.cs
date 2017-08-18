@@ -42,18 +42,15 @@ namespace BlipDrop.Data
 
         public CustomerEditViewModel CreateCustomer()
         {
-            using (var context = new ApplicationDbContext())
+            var cRepo = new CountriesRepository();
+            var rRepo = new RegionsRepository();
+            var customer = new CustomerEditViewModel()
             {
-                var cRepo = new CountriesRepository();
-                var rRepo = new RegionsRepository();
-                var customer = new CustomerEditViewModel()
-                {
-                    CustomerID = Guid.NewGuid().ToString(),
-                    Countries = cRepo.GetCountries(),
-                    Regions = rRepo.GetRegions()
-                };
-                return customer;
-            }
+                CustomerID = Guid.NewGuid().ToString(),
+                Countries = cRepo.GetCountries(),
+                Regions = rRepo.GetRegions()
+            };
+            return customer;
         }
 
         public bool SaveCustomer(CustomerEditViewModel customeredit)
