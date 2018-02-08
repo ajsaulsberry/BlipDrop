@@ -38,9 +38,8 @@ Repository
 
 1. Download or clone this repository.
 1. Open the solution in Visual Studio 2017 or higher.
-1. Select the **Blip.Data** project.
+1. Select the **Blip.Drop** project.
 1. Open a Package Manager Console window.
-1. Select "Blip.Data" for **Default Project**.
 1. Run: `update-database`.
 
 This will create the database, apply Entity Framework migrations, and run the `Seed` method to populate the database with values for the lookup tables.
