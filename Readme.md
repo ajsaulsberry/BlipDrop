@@ -1,6 +1,6 @@
-# BlipBinding
+# BlipDrop
 
-**_BlipBinding_** is an ASP.NET MVC case study solution created to accompany a guide in the **PluralSight** [**HackGuides()**](https://www.pluralsight.com/guides/microsoft-net) collection for Microsoft .NET technologies.
+**_BlipDrop_** is an ASP.NET MVC case study solution created to accompany a guide in the **PluralSight** [**HackGuides()**](https://www.pluralsight.com/guides/microsoft-net) collection for Microsoft .NET technologies.
 
 ## PluralSight Hack.Guides()
 
