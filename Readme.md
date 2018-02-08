@@ -16,6 +16,7 @@ Repository
 ## Solution Projects
 
 | Project | Application Layer |
+| :--- | :---
 | Blip.Drop | (all) |
 
 ## Technologies
