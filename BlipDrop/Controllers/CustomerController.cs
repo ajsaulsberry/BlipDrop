@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using BlipDrop.Data;
 using BlipDrop.ViewModels;
@@ -58,11 +59,13 @@ namespace BlipDrop.Controllers
                         return RedirectToAction("Index");
                     }
                 }
-                return View();
+                // Handling model state errors is beyond the scope of the demo, so just throwing an ApplicationException when the ModelState is invalid
+                // and rethrowing it in the catch block.
+                throw new ApplicationException("Invalid model");
             }
-            catch
+            catch (ApplicationException ex)
             {
-                return View();
+                throw ex;
             }
         }
 
