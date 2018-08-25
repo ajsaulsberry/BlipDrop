@@ -1,10 +1,10 @@
 # BlipDrop
 
-**_BlipDrop_** is an ASP.NET MVC case study solution created to accompany a guide in the **PluralSight** [**HackGuides()**](https://www.pluralsight.com/guides/microsoft-net) collection for Microsoft .NET technologies.
+**_BlipDrop_** is an ASP.NET MVC case study solution created to accompany a guide in the **** [**PluralSight Guides**](https://www.pluralsight.com/guides) collection for Microsoft .NET technologies.
 
-## PluralSight Hack.Guides()
+## PluralSight Guides
 
-[ASP.NET MVC - Populating dropdown lists in Razor views using the MVVM design pattern, Entity Framework, and Ajax](https://www.pluralsight.com/guides/microsoft-net/asp-net-mvc-populating-dropdown-lists-in-razor-views-using-the-mvvm-design-pattern-entity-framework-and-ajax) - This guide presents a couple common ways to populate dropdown lists in ASP.NET MVC Razor views, with an emphasis on producing functional HTML forms with a minimum amount of code.
+[ASP.NET MVC - Populating dropdown lists in Razor views using the MVVM design pattern, Entity Framework, and Ajax](https://www.pluralsight.com/guides/asp-net-mvc-populating-dropdown-lists-in-razor-views-using-the-mvvm-design-pattern-entity-framework-and-ajax) - This guide presents a couple common ways to populate dropdown lists in ASP.NET MVC Razor views, with an emphasis on producing functional HTML forms with a minimum amount of code.
 
 *Notice: PluralSight and the author(s) disclaim any liability for errors or omissions in this code. See the [Disclaimer of Warranties and Limitation of Liability](#disclaimer-of-warranties-and-limitation-of-liability) for complete information.*
 
