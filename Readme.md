@@ -1,6 +1,6 @@
 # BlipDrop
 
-**_BlipDrop_** is an ASP.NET MVC case study solution created to accompany a guide in the **** [**PluralSight Guides**](https://www.pluralsight.com/guides) collection for Microsoft .NET technologies.
+**_BlipDrop_** is an ASP.NET MVC case study solution created to accompany a guide in the [**PluralSight Guides**](https://www.pluralsight.com/guides) collection for Microsoft .NET technologies.
 
 ## PluralSight Guides
 
