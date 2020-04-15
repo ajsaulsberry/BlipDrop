@@ -24,13 +24,13 @@ Repository
 | Dependency | Version*
 | :--- | ---:
 | .NET Framework | 4.6.2
-| ASP.NET MVC | 5.2.3
-| Bootstrap | 3.3.7
+| ASP.NET MVC | 5.2.7
+| Bootstrap | 3.4.1
 | C# | 6
-| Entity Framework | 6.1.3
-| jQuery | 3.2.1
-| jQuery Validation | 1.16.0
-| Microsoft jQuery Unobtrusive Validation | 3.2.3
+| Entity Framework | 6.4.0
+| jQuery | 3.5.0
+| jQuery Validation | 1.19.1
+| Microsoft jQuery Unobtrusive Validation | 3.2.11
 
 &ast; As of the latest commit.
 
@@ -39,6 +39,7 @@ Repository
 1. Download or clone this repository.
 1. Open the solution in Visual Studio 2017 or higher.
 1. Select the **Blip.Drop** project.
+1. Open the _Web.config_ file in the project root and update the value of `connectionString` for the `ApplicationDbContext` connection string to point to a SQL Server database engine that exists on your local machine.
 1. Open a Package Manager Console window.
 1. Run: `update-database`.
 
